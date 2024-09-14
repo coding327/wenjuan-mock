@@ -16,5 +16,18 @@ module.exports = [
         }
       }
     }
-  }
+  },
+  {
+    url: '/api/question',
+    method: 'post',
+    response: config => {
+      return {
+        code: 200,
+        data: {
+          id: Random.id()
+          // ...
+        }
+      }
+    }
+  },
 ]
