@@ -5,7 +5,7 @@ const Random = Mock.Random
 module.exports = [
   {
     url: '/api/question/:id',
-    type: 'get',
+    method: 'get',
     response: config => {
       return {
         code: 200,

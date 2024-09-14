@@ -3,7 +3,7 @@ const Mock = require('mockjs')
 module.exports = [
   {
     url: '/api/test',
-    type: 'get',
+    method: 'get',
     response: config => {
       return {
         code: 200,
