@@ -8,7 +8,7 @@ module.exports = [
     method: 'get',
     response: config => {
       return {
-        code: 200,
+        code: 0,
         data: {
           id: config.params.id,
           title: Random.ctitle(),
@@ -22,7 +22,7 @@ module.exports = [
     method: 'post',
     response: config => {
       return {
-        code: 200,
+        code: 0,
         data: {
           id: Random.id()
           // ...
