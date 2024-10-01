@@ -35,17 +35,19 @@ module.exports = [
     url: '/api/question',
     method: 'get',
     response: config => {
-      const { isStar, isDeleted } = config.query
+      const { query = {} } = config
+      const { isStar, isDeleted } = query
+      const pageSize = parseInt(query.pageSize) || 10
 
-      console.log('isDeleted', isDeleted)
       return {
         code: 0,
         data: {
           list: getQuestionList({
+            length: pageSize,
             isStar: isStar === 'true',
             isDeleted: isDeleted === 'true'
           }),
-          total: 10
+          total: 100,
         }
       }
     }
